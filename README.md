@@ -1,124 +1,90 @@
-E-commerce Profitability & Revenue Intelligence
+# E-commerce Profitability & Revenue Intelligence
 
-Project Overview
+An end-to-end data analytics project using **MySQL and Power BI** to investigate sales performance, profitability, product trends, customer behavior, and regional performance.
 
-An end-to-end data analytics project focused on evaluating e-commerce sales performance, profitability, product performance, customer behavior, regional trends, and discount patterns.
+## Project Overview
 
-The project uses SQL for data cleaning and exploratory analysis and Power BI to build an interactive business intelligence dashboard.
+This project analyzes the Sample Superstore dataset to identify revenue drivers, profitability issues, and business opportunities. SQL was used for data cleaning and exploratory analysis, while Power BI was used to build an interactive three-page dashboard.
 
-Tools & Technologies
+## Tools & Technologies
 
-MySQL: Data cleaning, transformation, and exploratory data analysis
+- **MySQL:** Data cleaning, transformation, and exploratory data analysis
+- **Power BI:** Data modeling and interactive dashboard development
+- **DAX:** Measures, KPIs, and year-over-year revenue growth
 
-Power BI: Data modeling, DAX measures, and interactive dashboards
+## Dataset
 
-DAX: Business performance metrics and year over year revenue growth
+The project uses the Sample Superstore dataset, containing order-level sales information.
 
+- Raw dataset: `data/RAW/Sample - Superstore.csv`
+- Cleaned dataset: `data/clean/orders_final_export.tsv`
+- Final cleaned records: **9,993**
 
-Dataset
+Data preparation included duplicate removal, handling missing and blank values, standardizing fields, validating dates and numeric values, and converting columns to appropriate data types.
 
-Sample Superstore dataset containing order-level information, including:
+## Dashboard
 
-Orders and customers
+The Power BI report contains three pages:
 
-Products and categories
+### 1. Executive Overview
 
-Sales, quantity, discounts, and profit
+![Executive Overview](Screenshots/executive-overview.png)
 
-Dates and shipping information
+Provides an overview of revenue, profit, profit margin, orders, customers, and average order value, with performance trends from 2014 to 2017.
 
-Geographic information
+### 2. Product Profitability
 
-The cleaned dataset contains 9,993 records.
+![Product Profitability](Screenshots/product-profitability.png)
 
+Examines category and subcategory profitability, highlights the most and least profitable products, and compares revenue contribution across categories.
 
-Data Cleaning
+### 3. Regional Performance & Risk
 
-The data preparation process included:
+![Regional Performance](Screenshots/regional-performance.png)
 
-Identifying and removing duplicate records
+Explores state-level profitability, regional performance, discount patterns, and loss-making customers.
 
-Checking missing and blank values
+## Key Business Findings
 
-Standardizing text fields
+- Total revenue reached **$2.30 million**, with total profit of **$286,409**.
+- Overall profit margin was **12.47%**.
+- Technology generated the highest category profit, while Furniture had a much lower profit margin of **2.49%**.
+- The West region recorded the highest revenue and profit.
+- Central had the lowest regional profit margin at **7.92%**.
+- Discount levels of 30% and above showed negative aggregate profit in this dataset.
+- The Tables and Bookcases subcategories recorded overall losses.
 
-Validating dates and numeric values
+## Repository Structure
 
-Converting columns into appropriate data types
+```text
+Ecommerce-Profitability-Analysis/
+│
+├── data/
+│   ├── RAW/
+│   └── clean/
+│
+├── SQL/
+│   ├── DATA_CLEANING_sql.sql
+│   └── exploratory_analysis.sql
+│
+├── Power BI/
+│   └── Ecommerce_Profitability.pbix
+│
+├── Screenshots/
+│   ├── executive-overview.png
+│   ├── product-profitability.png
+│   └── regional-performance.png
+│
+└── README.md
+```
 
-Preserving identified inconsistencies for documentation rather than making unsupported corrections
+## Files
 
+- SQL scripts: data cleaning and exploratory analysis queries.
+- Power BI file: interactive dashboard report.
+- Screenshots: dashboard page previews.
+- Data folder: original and cleaned datasets.
 
-Exploratory Data Analysis
+---
 
-The SQL analysis covered six areas:
-
-Overall business performance
-
-Time-based sales and profit trends
-
-Product and category profitability
-
-Regional and state-level performance
-
-Discount and profitability relationships
-
-Customer performance and purchasing behavior
-
-
-Key Findings
-
-Total revenue reached $2.30 million, with total profit of $286.41K.
-
-Overall profit margin was 12.47%.
-
-Technology generated the highest category profit at approximately $145.45K.
-
-Furniture had a significantly lower profit margin of 2.49%.
-
-The West region led in both revenue and profit.
-
-The Central region had the lowest regional profit margin at 7.92%.
-
-Discount levels of 30% and above were associated with negative aggregate profit in this dataset.
-
-Certain states and product subcategories showed substantial losses, highlighting areas for further investigation.
-
-
-Power BI Dashboard
-
-The interactive dashboard contains three pages:
-
-1. Executive Overview
-
-High-level business KPIs, revenue trends, profit trends, and profit margin analysis.
-
-2. Product Profitability
-
-Category and subcategory performance, top profitable products, and least profitable products.
-
-3. Regional Performance & Risk
-
-State-level profitability, regional comparisons, discount analysis, and customer losses.
-
-
-
-Business Questions
-
-How is overall revenue and profitability changing over time?
-
-Which categories and products contribute most to profit?
-
-Which products generate the greatest losses?
-
-Which regions and states perform best and worst?
-
-How do discount levels relate to profitability?
-
-Which customers generate the largest losses?
-
-
-
-Project Outcome
-
-This project demonstrates an end-to-end analytics workflow, from raw data preparation and SQL-based analysis to Power BI data modeling, DAX calculations, and interactive business reporting.
+**Project focus:** SQL · Data Cleaning · Exploratory Data Analysis · Power BI · DAX · Business Intelligence
